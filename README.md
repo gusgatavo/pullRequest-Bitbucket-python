@@ -47,3 +47,16 @@ Esta ejecución obtiene la información a ejecutar desde el archivo [pullRequest
 
 Por otro lado en el caso de ejecutar de manera masiva se generar un archivo (result.txt), el cual contendra el resultado de cada uno de PR solicitados.
 ![resultado ejecución Masiva](assent/ExectMasiva.svg "resultado ejecución Masiva")
+
+El archivo de salida del masivo tiene el siguiente formato
+
+    {workspace}/{repo_slug}/{branch_origin}/{branch_destination} -- AutomaticPullRequest{yyyyMMdd}_{HHMMSS}_{branchSource}To{branchDestination} -- {URL_PR} -- {MessageError} 
+
+La respuesta esta formada por los siguientes campos:
+
+    1. PR que se solicito ejecutar
+    2. Nombre del PR que se genero.
+    3. Url del Pull Request generado.
+    4. Mensaje de error.
+
+Todos separados por "--". En el caso de que el proceso haya generado un PR, se omite el 4 campo. En caso contrario se omiten los campos 2 y 3; y se deja mensaje en 4 campo
