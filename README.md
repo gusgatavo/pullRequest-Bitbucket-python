@@ -18,5 +18,5 @@ Para realizar la configuración general del proyecto se tiene que tener en cuent
 
 Para esto se tiene que obtener el username del usuario con el que va a ejecutar el PR. Este se puede obtener con los siguientes pasos.
 
-    1- ingresando a __settings__ -> __Account settings__
+    1- ingresando a #### settings -> #### Account settings
     2- En la sección "**Bitbucket profile setting**", se puede apreciar el campo "**Username**"
