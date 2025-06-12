@@ -46,23 +46,34 @@ Este ejecutador tiene dos formas de ejecución, las cuales son las siguientes:
 
     py PrBitbucket_individual.py {workspace} {repo_slug} {branch_origin} {branch_destination}
 
+Al terminar la ejecución de la creación del Pull Request, aplicativo consultará si se desea aprobar y realizar el merge de dicho PR creado
+
+![Ejecución PR con Merge](assent/PRWithMerge.svg "Ejecución PR con Merge")
+
 2- La segunda opción corresponde a la ejecución masiva de los PR, la cual se ejecutan con el siguiente comando:
 
-    py PrBitbucket_Massive.py
+    py PrBitbucket_Massive.py  //solo sé ejecutar la creación de los PR
+
+    o
+
+    py PrBitbucket_Massive.py merge //Se creará los Pull Request, además de la aprobación y el merge del PR
 
 Esta ejecución obtiene la información a ejecutar desde el archivo [pullRequest.txt](pullRequest.txt). En el cual se tiene que registrar el workspace, repo_slug, branch_origin, branch_destination; esto separado con una coma. Como se muesta a continuación
 
-    {workspace},{repo_slug},{branch_origin},{branch_destination}
+    workspace,repo_slug,branch_origin,branch_destination
 
 3- La respuesta varía dependiendo de la forma de ejecutar el proyecto. En el caso de ejecutar el flujo individual, el resultado de la ejecución aparecerá por pantalla.
-![Resultado ejecución individual](assent/ExectIndividual.svg "Resultado ejecución individual")
+![Ejecución PR con Merge](assent/PRWithMerge.svg "Ejecución PR con Merge")
 
 Por otro lado, en el caso de ejecutar de manera masiva sé generar un archivo (result.txt), el cual contendrá el resultado de cada uno de PR solicitados.
 ![Resultado ejecución Masiva](assent/ExectMasiva.svg "Resultado ejecución Masiva")
 
+Salida con ejecución de merge
+![Resultado ejecución Masiva con merge](assent/ExectMasiva_withMerge.svg "Resultado ejecución Masiva con merge")
+
 El archivo de salida del masivo tiene el siguiente formato
 
-    {workspace}/{repo_slug}/{branch_origin}/{branch_destination} -- AutomaticPullRequest{yyyyMMdd}_{HHMMSS}_{branchSource}To{branchDestination} -- {URL_PR} -- {MessageError} 
+    {workspace}/{repo_slug}/{branch_origin}/{branch_destination} -- {idpr}AutomaticPullRequest{yyyyMMdd}_{HHMMSS}_{branchSource}To{branchDestination} -- {URL_PR} -- {MessageError} 
 
 La respuesta está formada por los siguientes campos:
 

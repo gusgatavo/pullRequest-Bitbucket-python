@@ -1,3 +1,3 @@
-personalgavp,personal,feature/test,master
-personalgavp,personal,feature/test,develop
-personalgavp,persontwo,develop_migration,main
+workspace,repo_slug,branch_origin,branch_destination
+workspace,repo_slug,branch_origin,branch_destination
+workspace,repo_slug,branch_origin,branch_destination
