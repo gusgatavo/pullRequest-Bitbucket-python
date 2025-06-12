@@ -1,11 +1,16 @@
 # README -- Generador de Pull Request automatizado
-- [descripción](#description)
+
+## Index
+
+- [Descripción](#description)
 - [Configuración genérical del proyecto](#confirgureProject)
-- [Forma de ejecutar](#formtExec)
+- [Formas de ejecución](#formtExec)
+- [Chagelog](#chagelog)
 
 <a name="description"/>
 
 ## Descripción
+
 Este proyecto está desarrollado para genera Pull Request de manera automática y masiva. Esto enfocado principalmente a migración con gran cantidad de componentes.
 
 <a name="confirgureProject"/>
@@ -16,7 +21,7 @@ Para realizar la configuración del proyecto Se debe tener tanto el usuario y la
 
 1- Para obtener el username, se tiene que acceder a, ingresando a [settings -> Account settings](https://bitbucket.org/account/settings/).
 2- En la sección "Bitbucket profile setting", se puede apreciar el campo "Username"  (Como se muestra en la imagen a continuación).
-    
+
 ![Obtención username](assent/UserName.svg "Obtención username")
 3- Para obtener la clave para realizar la conexión por medio de la api se tiene que acceder a [settings -> App passwords](https://bitbucket.org/account/settings/app-passwords/). En esta sección se tiene que presionar el botón "Create app password"
 ![botón de creación de clave de app](assent/AppPassword_1.svg "botón de creación de clave de app")
@@ -27,7 +32,7 @@ Como se aprecia en la imagen, solo damos permisos para escribir pull requests. D
 5- Se levantará un modal en donde se puede apreciar la clave a utilizar.
 ![Modal con clave de app](assent/AppPassword_3.svg "Modal con clave de app")
 6- Una vez obtenida esta información se tiene que dejar esta información en el archivo [.env](.env), en donde se tiene que pegar el username y el password app, obtenida anteriormente
-    
+
     USER={username}
     PASSWORD={appPassword}
     
@@ -68,14 +73,21 @@ La respuesta está formada por los siguientes campos:
 
 Todos separados por "--". En el caso de que el proceso haya generado un PR, se omite el 4° campo. En caso contrario, se omiten los campos 2° y 3°; y se deja mensaje en 4° campo.
 
+<a name="Chagelog"/>
+
 ## Chagelog
+
 ### 12-06-2025
+
 #### Version 2.0.0
+
 - Se agrega funcionalidad de aprobación de Pull Request.
 - Se agrega funcionalidad de merge de Pull Request
 
 ### 11-06-2025
+
 #### Version 1.0.0
+
 - Se crea proyecto.
 - Se crea funcion de creación de Pull Request.
 - Se crea forma de ejecución individual como masiva
