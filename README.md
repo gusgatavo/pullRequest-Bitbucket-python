@@ -1,8 +1,14 @@
 # README -- Generador de Pull Request automatizado
+- [descripción](#description)
+- [Configuración genérical del proyecto](#confirgureProject)
+- [Forma de ejecutar](#formtExec)
 
+<a name="description"/>
 
 ## Descripción
 Este proyecto está desarrollado para genera Pull Request de manera automática y masiva. Esto enfocado principalmente a migración con gran cantidad de componentes.
+
+<a name="confirgureProject"/>
 
 ## Configuración genérical del proyecto
 
@@ -25,6 +31,7 @@ Como se aprecia en la imagen, solo damos permisos para escribir pull requests. D
     USER={username}
     PASSWORD={appPassword}
     
+<a name="formtExec">
 
 ## Formas de ejecución
 
@@ -60,3 +67,15 @@ La respuesta está formada por los siguientes campos:
     4. Mensaje de error.
 
 Todos separados por "--". En el caso de que el proceso haya generado un PR, se omite el 4° campo. En caso contrario, se omiten los campos 2° y 3°; y se deja mensaje en 4° campo.
+
+## Chagelog
+### 12-06-2025
+#### Version 2.0.0
+- Se agrega funcionalidad de aprobación de Pull Request.
+- Se agrega funcionalidad de merge de Pull Request
+
+### 11-06-2025
+#### Version 1.0.0
+- Se crea proyecto.
+- Se crea funcion de creación de Pull Request.
+- Se crea forma de ejecución individual como masiva

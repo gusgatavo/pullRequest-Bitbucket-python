@@ -1,3 +1,0 @@
-personalgavp/personal/TestRPRemote/master --  --  -- Ya existe un Pull Request Pendiente de aprobación
-personalgavp/personal/TestRPRemote/develop --  --  -- Ya existe un Pull Request Pendiente de aprobación
-personalgavp/persontwo/develop_migration/main --  --  -- Ya existe un Pull Request Pendiente de aprobación
